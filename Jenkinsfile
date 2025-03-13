@@ -25,6 +25,7 @@ pipeline {
             steps {
                 sh '''
                 echo 'Test stage'
+                [ -f dist/index.html ] && echo 'dist/index.html file exists' || echo 'index.html file not found'
                 '''
             }
         }
